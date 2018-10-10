@@ -1,0 +1,9 @@
+default: &default
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  adapter: postgis
+  encoding: unicode
+  database: postgres_indexes_presentation
+
+development:
+  <<: *default
